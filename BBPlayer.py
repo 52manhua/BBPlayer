@@ -24,7 +24,7 @@ def BBPlayer(filename,dokey,speed):
     la = int(sol * q2)
     si = int(la *q2)	
     notes = [0,do,re,mi,fa,sol,la,si]
-    beats = 60/speed*1000
+    beats = 60.0/speed*1000
     
     # print(beats)
     with open(filename) as fp:
@@ -51,6 +51,6 @@ def BBPlayer(filename,dokey,speed):
             else:
                 player.Beep(int(n*p),int(b*beats))
 
-
-BBPlayer('dayu','D',65)
+# fix to float divsion
+BBPlayer('dayu','D',65.0)
 
